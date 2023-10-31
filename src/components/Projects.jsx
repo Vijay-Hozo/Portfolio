@@ -29,7 +29,7 @@ const Projects = () => {
     ]
   return (
     
-    <div name="Projects" className='px-[17%] bg-gradient-to-b from-black to-gray-800 w-full text-white '>
+    <div name="Projects" className='px-[17%] bg-gradient-to-b from-black to-gray-800 w-full text-white max-sm:relative max-sm:pt-20'>
         <div classname=" max-w-screen p-4 flex flex-col justify-center w-screen h-full">
             <div className='pb-8'>
                 <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline font-FD'>PROJECT</p>
