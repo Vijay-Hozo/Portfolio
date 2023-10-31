@@ -23,8 +23,8 @@ const Projects = () => {
             id:3,
             src:portfolio,
             heading:'Portfolio',
-            href:'',
-            code:''
+            href:'https://avijay.tech/',
+            code:'https://github.com/Vijay-Hozo/Portfolio'
         }
     ]
   return (

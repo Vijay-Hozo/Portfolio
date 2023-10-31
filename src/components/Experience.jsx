@@ -4,6 +4,7 @@ import css from '../assets/css.png';
 import javascript from '../assets/javascript.png';
 import github from '../assets/github.png';
 import tailwind from '../assets/tailwind.png';
+import react from '../assets/react.png';
 
 const Experience = () => {
     const techs = [
@@ -35,6 +36,12 @@ const Experience = () => {
         id:5,
         src:tailwind,
         title:'TAILWIND',
+        style:'shadow-sky-400',
+      },
+      {
+        id:5,
+        src:react,
+        title:'REACT',
         style:'shadow-sky-400',
       }
     ]
