@@ -9,19 +9,22 @@ const Projects = () => {
             id:1,
             src:knowmynation,
             heading:'Know My Nation',
+            description:'Website to explore about INDIA',
             href:'https://knowmynation.netlify.app/',
-            code:'https://github.com/Vijay-Hozo/know-my-nation'
+            code:'https://github.com/Vijay-Hozo/know-my-nation'        
         },
         {
             id:2,
             src:hozotech,
-            heading:'Hozo Tech-Landing page',
+            heading:'Hozo Tech',
+            description:'Demo Landing page',
             href:'https://hozotech.netlify.app/',
             code:'https://github.com/Vijay-Hozo/OCTANET_SEPTEMBER'
         },
         {
             id:3,
             src:portfolio,
+            description:'Portfolio of myself',
             heading:'Portfolio',
             href:'https://avijay.tech/',
             code:'https://github.com/Vijay-Hozo/Portfolio'
