@@ -18,5 +18,5 @@ This project is a portfolio showcasing my skills and projects, built using React
 
 ## Project Structure
 
-The project follows a standard React.js project structure with components, styles, and assets folders. The Tailwind CSS styles are used to enhance the visual presentation.
+The project follows a standard React.js project structure with components, styles, and assets folders. The Tailwind CSS styles are used to enhance the visual presentation. Just connect with me.
 
