@@ -3,6 +3,9 @@ import knowmynation from "../assets/knowmynation.png" ;
 import hozotech from "../assets/hozo.png";
 import Projectcard from './Projectcard';
 import portfolio from '../assets/portfolio.png'
+import assestsmanager from '../assets/assestsmanager.png'
+import taskmanager from '../assets/taskmanager.png'
+import expensetracker from '../assets/expensetracker.png'
 const Projects = () => {
     const projects =[
         {
@@ -28,6 +31,30 @@ const Projects = () => {
             heading:'Portfolio',
             href:'https://avijay.tech/',
             code:'https://github.com/Vijay-Hozo/Portfolio'
+        },
+        {
+            id:4,
+            src:assestsmanager ,
+            heading:'Decentralized-finance',
+            description:'Website to know about DeFi',
+            href:'https://knowmynation.netlify.app/',
+            code:'https://github.com/Vijay-Hozo/Decentralized_Finance_App'
+        },
+        {
+            id:5,
+            src:taskmanager,
+            heading:'Task-Manager',
+            description:'Manage Your tasks here!',
+            href:'https://knowmynation.netlify.app/',
+            code:'https://github.com/Vijay-Hozo/Task-Manager'
+        },
+        {
+            id:6,
+            src:expensetracker,
+            heading:'Expense Tracker',
+            description:'Track your expenses here!',
+            href:'https://knowmynation.netlify.app/',
+            code:'https://github.com/Vijay-Hozo/Expense_Tracker_API'
         }
     ]
   return (
