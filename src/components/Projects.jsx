@@ -17,14 +17,6 @@ const Projects = () => {
             code:'https://github.com/Vijay-Hozo/know-my-nation'        
         },
         {
-            id:2,
-            src:hozotech,
-            heading:'Hozo Tech',
-            description:'Demo Landing page',
-            href:'https://hozotech.netlify.app/',
-            code:'https://github.com/Vijay-Hozo/OCTANET_SEPTEMBER'
-        },
-        {
             id:3,
             src:portfolio,
             description:'Portfolio of myself',
@@ -35,9 +27,9 @@ const Projects = () => {
         {
             id:4,
             src:assestsmanager ,
-            heading:'Decentralized-finance',
-            description:'Website to know about DeFi',
-            href:'https://knowmynation.netlify.app/',
+            heading:'Assets Manager',
+            description:'Exchange your assets here!',
+            // href:'https://knowmynation.netlify.app/',
             code:'https://github.com/Vijay-Hozo/Decentralized_Finance_App'
         },
         {
@@ -45,7 +37,7 @@ const Projects = () => {
             src:taskmanager,
             heading:'Task-Manager',
             description:'Manage Your tasks here!',
-            href:'https://knowmynation.netlify.app/',
+            // href:'https://knowmynation.netlify.app/',
             code:'https://github.com/Vijay-Hozo/Task-Manager'
         },
         {
@@ -53,7 +45,7 @@ const Projects = () => {
             src:expensetracker,
             heading:'Expense Tracker',
             description:'Track your expenses here!',
-            href:'https://knowmynation.netlify.app/',
+            // href:'https://knowmynation.netlify.app/',
             code:'https://github.com/Vijay-Hozo/Expense_Tracker_API'
         }
     ]
