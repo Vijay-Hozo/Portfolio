@@ -5,7 +5,7 @@ import Projectcard from './Projectcard';
 import portfolio from '../assets/portfolio.png'
 import assestsmanager from '../assets/assestsmanager.png'
 import taskmanager from '../assets/taskmanager.png'
-import expensetracker from '../assets/expensetracker.png'
+import hopon from '../assets/HOPON.png'
 const Projects = () => {
     const projects =[
         {
@@ -18,11 +18,11 @@ const Projects = () => {
         },
         {
             id:3,
-            src:portfolio,
-            description:'Portfolio of myself',
-            heading:'Portfolio',
-            href:'https://avijay.tech/',
-            code:'https://github.com/Vijay-Hozo/Portfolio'
+            src:hopon,
+            description:'Ride Sharing App',
+            heading:'HopON',
+            href:'https://hopon-app.vercel.app/',
+            code:'https://github.com/Vijay-Hozo/HopeOn'
         },
         {
             id:4,
@@ -40,14 +40,6 @@ const Projects = () => {
             href:'https://taskiy.netlify.app/',
             code:'https://github.com/Vijay-Hozo/Task-Manager'
         },
-        {
-            id:6,
-            src:expensetracker,
-            heading:'Expense Tracker',
-            description:'Track your expenses here!',
-            // href:'https://knowmynation.netlify.app/',
-            code:'https://github.com/Vijay-Hozo/Expense_Tracker_API'
-        }
     ]
   return (
     
