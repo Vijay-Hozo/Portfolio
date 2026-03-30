@@ -10,8 +10,8 @@ const Projectcard = (props) => {
         <p className='flex justify-center pt-2 font-semibold'>{description}</p>
             <div className='flex-2 flex items-center justify-center'>
               
-                <a href={href} target='_blank' className='py-5  flex-1 text-center duration-200 hover:scale-105 '>Demo</a>
-                <a href={code} target='_blank' className='py-5 flex-1 text-center duration-200 hover:scale-105'>Code</a>
+                <a href={href} target='_blank' rel='noreferrer' className='py-5  flex-1 text-center duration-200 hover:scale-105 '>Demo</a>
+                <a href={code} target='_blank' rel='noreferrer' className='py-5 flex-1 text-center duration-200 hover:scale-105'>Code</a>
                 
             </div>
     </div>
