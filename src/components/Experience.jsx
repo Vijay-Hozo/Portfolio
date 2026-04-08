@@ -1,72 +1,108 @@
-import React from 'react';
-import html from '../assets/html.png';
-import css from '../assets/css.png';
-import javascript from '../assets/javascript.png';
-import github from '../assets/github.png';
-import tailwind from '../assets/tailwind.png';
-import react from '../assets/react.png';
+import React from "react";
 
 const Experience = () => {
-    const techs = [
-      {
-        id:1,
-        src:html,
-        title:'HTML',
-        style:'shadow-orange-500',
-      },
-      {
-        id:2,
-        src:css,
-        title:'CSS',
-        style:'shadow-blue-500',
-      },
-      {
-        id:3,
-        src:javascript,
-        title:'JAVASCRIPT',
-        style:'shadow-yellow-500',
-      },
-      {
-        id:4,
-        src:github,
-        title:'GITHUB',
-        style:'shadow-gray-400',
-      },
-      {
-        id:5,
-        src:tailwind,
-        title:'TAILWIND',
-        style:'shadow-sky-400',
-      },
-      {
-        id:5,
-        src:react,
-        title:'REACT',
-        style:'shadow-sky-400',
-      }
-    ]
-  return (
-    <div name='Experience' className='bg-gradient-to-b from-gray-800 to-black w-full h-screen max-sm:relative  max-sm:pt-20'>
-      <div className=' max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white'>
-        <div>
-          <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline font-FD'>EXPERIENCE</p>
-          <p className='py-6'>These are the Technologies I've explored</p>
-        </div>
-        <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
+  const experiences = [
+    {
+      id: 1,
+      role: "Full Stack Developer Intern",
+      organization: "PROPZING",
+      duration: "Internship",
+      stack: "Next.js, Supabase, Cloudinary",
+      highlights: [
+        "Engineered an AI-powered real estate platform, reducing property search time by 40%.",
+        "Architected a scalable frontend using Next.js, boosting load speed by 30%.",
+        "Streamlined backend workflows using Supabase, reducing development time by 30%.",
+        "Optimized media delivery via Cloudinary, cutting image load time by 50%.",
+        "Resolved complex UI issues, improving responsiveness by 75%.",
+      ],
+    },
+    {
+      id: 2,
+      role: "Freelance Full Stack Developer",
+      organization: "Zionarch Architects",
+      duration: "Freelance",
+      stack: "Next.js, Supabase, SendGrid",
+      highlights: [
+        "Developed and deployed a production-ready website for Zionarch Architects.",
+        "Implemented email communication using SMTP (SendGrid), enabling reliable client inquiry handling.",
+        "Used Supabase Storage for efficient image management and faster content delivery.",
+        "Delivered a responsive and modern UI, improving online presence and user engagement.",
+      ],
+    },
+  ];
 
-        {
-          techs.map(({id, src, title, style})=>(
-            <div key={id} className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
-              <img src={src} alt="" className='w-20 mx-auto'/>
-              <p className='mt-4'>{title}</p>
-            </div>
-          
-          ))
-        }
+  const skills = [
+    { id: 1, name: "React.js", level: 90 },
+    { id: 2, name: "JavaScript", level: 88 },
+    { id: 3, name: "Tailwind CSS", level: 85 },
+    { id: 4, name: "Node.js", level: 80 },
+    { id: 5, name: "Express.js", level: 78 },
+    { id: 6, name: "MongoDB", level: 75 },
+    { id: 7, name: "Git & GitHub", level: 86 },
+    { id: 8, name: "Next.js", level: 70 },
+  ];
+
+  return (
+    <div
+      name="Experience"
+      className="bg-gradient-to-b from-gray-800 to-black w-full text-white py-14 max-sm:pt-24"
+    >
+      <div className="max-w-screen-lg mx-auto p-4 flex flex-col gap-12">
+        <div>
+          <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline font-FD">
+            EXPERIENCE
+          </p>
+          <p className="py-6 text-gray-300">
+            A snapshot of my recent work and core technical strengths.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          {experiences.map((item) => (
+            <article
+              key={item.id}
+              className="rounded-xl border border-gray-700 bg-gray-900/50 p-5 shadow-md shadow-black/40"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <h3 className="text-xl font-semibold text-cyan-300">{item.role}</h3>
+                <span className="text-sm text-gray-300">{item.duration}</span>
+              </div>
+              <p className="text-gray-200 mt-1">{item.organization}</p>
+              <p className="text-sm text-gray-400 mt-1">Tech: {item.stack}</p>
+              <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
+                {item.highlights.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-bold text-white">Skills Proficiency</h3>
+          <p className="text-gray-300 mt-2 mb-6">
+            Current comfort level across the technologies I use most often.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {skills.map((skill) => (
+              <div key={skill.id} className="rounded-lg bg-gray-900/60 border border-gray-700 p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <p className="font-semibold text-gray-100">{skill.name}</p>
+                  <span className="text-sm text-cyan-300">{skill.level}%</span>
+                </div>
+                <div className="w-full h-2 rounded-full bg-gray-700">
+                  <div
+                    className="h-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"
+                    style={{ width: `${skill.level}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

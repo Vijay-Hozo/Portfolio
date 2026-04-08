@@ -5,6 +5,7 @@ import assestsmanager from "../assets/assestsmanager.png";
 import taskmanager from "../assets/taskmanager.png";
 import hopon from "../assets/HOPON.png";
 import invite from "../assets/invite.png";
+import expensetracker from "../assets/expensetracker.png";
 const Projects = () => {
   const projects = [
     {
@@ -46,6 +47,13 @@ const Projects = () => {
       description: "Manage Your tasks here!",
       href: "https://taskiy.netlify.app/",
       code: "https://github.com/Vijay-Hozo/Task-Manager",
+    },
+    {
+      id: 7,
+      src: expensetracker,
+      heading: "Expense Tracker API",
+      description: "Track and manage expenses with backend API integration.",
+      code: "https://github.com/Vijay-Hozo/Expense_Tracker_API",
     },
   ];
   return (
