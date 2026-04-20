@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vijay A Resume</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #050816;
+        --panel: rgba(17, 24, 39, 0.92);
+        --panel-2: rgba(3, 7, 18, 0.9);
+        --text: #f8fafc;
+        --muted: #cbd5e1;
+        --line: rgba(148, 163, 184, 0.22);
+        --accent: #22d3ee;
+        --accent-2: #38bdf8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(34, 211, 238, 0.18), transparent 30%),
+          radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent 28%),
+          linear-gradient(180deg, #020617 0%, #0f172a 48%, #111827 100%);
+      }
+
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 32px 20px 48px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 12px 18px;
+        text-decoration: none;
+        font-weight: 700;
+        border: 1px solid transparent;
+      }
+
+      .button.primary {
+        color: #020617;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      }
+
+      .button.secondary {
+        color: var(--text);
+        background: transparent;
+        border-color: var(--line);
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr;
+        gap: 20px;
+      }
+
+      .name {
+        margin: 0;
+        font-size: clamp(2.25rem, 5vw, 4.4rem);
+        line-height: 0.96;
+      }
+
+      .role {
+        margin: 10px 0 16px;
+        font-size: 1.1rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .lead,
+      li,
+      p {
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .meta-grid,
+      .two-col {
+        display: grid;
+        gap: 16px;
+      }
+
+      .meta-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 22px;
+      }
+
+      .two-col {
+        grid-template-columns: 1.2fr 0.8fr;
+        margin-top: 20px;
+      }
+
+      .panel {
+        background: var(--panel-2);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+
+      h2,
+      h3,
+      h4 {
+        margin: 0 0 12px;
+      }
+
+      .section-title {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--accent);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .chip {
+        border-radius: 999px;
+        padding: 10px 14px;
+        border: 1px solid var(--line);
+        background: rgba(15, 23, 42, 0.75);
+        color: var(--text);
+        font-size: 0.94rem;
+      }
+
+      .experience-item + .experience-item {
+        margin-top: 14px;
+      }
+
+      @media (max-width: 820px) {
+        .hero,
+        .two-col,
+        .meta-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+          color: #000;
+        }
+
+        .page {
+          padding: 0;
+          max-width: none;
+        }
+
+        .topbar,
+        .actions {
+          display: none;
+        }
+
+        .card,
+        .panel {
+          background: #fff;
+          border-color: #cbd5e1;
+          box-shadow: none;
+        }
+
+        p,
+        li {
+          color: #111827;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="topbar">
+        <div>
+          <div class="section-title">Resume</div>
+          <p style="margin: 8px 0 0; color: #cbd5e1">Vijay A - Full Stack Developer</p>
+        </div>
+        <div class="actions">
+          <a class="button primary" href="/Vijay_SoftwareDeveloper.pdf" download="Vijay-A-Resume.pdf">Download</a>
+          <a class="button secondary" href="/">Back to Portfolio</a>
+        </div>
+      </div>
+
+      <section class="card hero">
+        <div>
+          <h1 class="name">Vijay A</h1>
+          <div class="role">Full Stack Developer</div>
+          <p class="lead">
+            I build responsive web experiences with React, Next.js, Node.js, and Tailwind CSS.
+            My work focuses on clean interfaces, practical backend integration, and maintainable code.
+          </p>
+
+          <div class="meta-grid">
+            <div class="panel">
+              <h3>Education</h3>
+              <p style="margin: 0">B.Tech Information Technology</p>
+              <p style="margin: 4px 0 0">Coimbatore</p>
+            </div>
+            <div class="panel">
+              <h3>Focus</h3>
+              <p style="margin: 0">Frontend and full stack web development</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Skills</h3>
+          <div class="chips">
+            <span class="chip">React.js</span>
+            <span class="chip">Next.js</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Express.js</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">Git & GitHub</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <div class="card">
+          <h2 class="section-title">Experience</h2>
+
+          <article class="experience-item panel">
+            <h3>Full Stack Developer Intern</h3>
+            <p style="margin: 0 0 10px">PROPZING - Internship</p>
+            <ul>
+              <li>Built an AI-powered real estate platform with Next.js and Supabase.</li>
+              <li>Improved frontend performance and UI responsiveness across core pages.</li>
+            </ul>
+          </article>
+
+          <article class="experience-item panel">
+            <h3>Freelance Full Stack Developer</h3>
+            <p style="margin: 0 0 10px">Zionarch Architects - Freelance</p>
+            <ul>
+              <li>Delivered a production-ready website with email and storage integrations.</li>
+              <li>Created a responsive UI tailored for a clean client-facing experience.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Selected Projects</h2>
+          <ul>
+            <li>Know My Nation - India-focused exploration website.</li>
+            <li>HopON - Ride sharing app.</li>
+            <li>InVITE - Event management app.</li>
+            <li>Task-Manager - Task management web app.</li>
+            <li>Expense Tracker API - backend API for expense management.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

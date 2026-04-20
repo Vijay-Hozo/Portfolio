@@ -50,12 +50,12 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
+    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed z-40">
       <ul>
         {links.map(({ id, child, href, style }) => (
           <li
             key={id}
-            className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-gray-500 hover:ml-[-10px] hover:rounded-md duration-300 ${
+            className={`flex h-14 w-44 items-center justify-between border border-white/10 bg-slate-900/90 px-4 pl-5 ml-[-102px] text-white backdrop-blur-xl transition-all duration-300 hover:ml-[-12px] hover:border-cyan-300/30 hover:bg-slate-800/95 ${
               style || ""
             }`}
           >
@@ -63,7 +63,7 @@ const SocialLinks = () => {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex justify-between items-center w-full text-white"
+              className="flex w-full items-center justify-between text-sm font-medium text-white"
             >
               {child}
             </a>

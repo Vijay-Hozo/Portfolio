@@ -28,19 +28,35 @@ const NavBar = () => {
 
     {
       id: 6,
+      link: "Resume",
+    },
+
+    {
+      id: 7,
       link: "Contact",
     },
   ];
 
   return (
-    <div className="flex justify-center items-center w-full h-20 px-4 text-white bg-black sticky top-0 z-50">
-      <ul className="hidden md:flex ">
-        {links.map(({ id, link }) => (
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
+      <div className="mx-auto flex h-20 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#Home" className="flex items-center gap-3 text-white">
+          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-500 font-FD text-lg font-bold text-slate-950 shadow-lg shadow-cyan-950/40">
+            VA
+          </span>
+          <div className="hidden sm:block">
+            <p className="text-[0.7rem] uppercase tracking-[0.32em] text-cyan-300/80">Portfolio</p>
+            <p className="font-semibold text-white">Vijay A</p>
+          </div>
+        </a>
+
+        <ul className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 p-2 shadow-xl shadow-black/20 md:flex">
+          {links.map(({ id, link }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:text-white duration-300"
+              className="rounded-full px-4 py-2 text-sm font-medium text-slate-400 transition duration-300 hover:bg-white/5 hover:text-white"
           >
-            <Link to={link} smooth duration={500}>
+              <Link to={link} smooth duration={500} spy offset={-90} activeClass="text-cyan-300">
               {link}
             </Link>
           </li>
@@ -49,31 +65,36 @@ const NavBar = () => {
 
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden "
+          className="cursor-pointer text-slate-400 transition hover:text-white md:hidden"
       >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+          {nav ? <FaTimes size={28} /> : <FaBars size={28} />}
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+          <div className="absolute inset-x-0 top-20 z-40 md:hidden">
+            <ul className="mx-4 flex flex-col gap-2 rounded-3xl border border-white/10 bg-slate-950/95 p-5 text-slate-300 shadow-2xl shadow-black/40 backdrop-blur-xl">
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
+                className="rounded-2xl px-4 py-3 text-xl capitalize transition hover:bg-white/5 hover:text-white"
             >
               <Link
-                onclick={() => setNav(!nav)}
+                  onClick={() => setNav(!nav)}
                 to={link}
                 smooth
+                  spy
+                  offset={-90}
                 duration={500}
               >
                 {link}
               </Link>
             </li>
           ))}
-        </ul>
+            </ul>
+          </div>
       )}
-    </div>
+      </div>
+    </header>
   );
 };
 

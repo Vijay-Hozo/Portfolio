@@ -2,29 +2,61 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div name="About" 
-    className='w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white  max-sm:relative  max-sm:pt-20'>
-        
-        <div 
-        className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full '>
-            
-            <div 
-            className='pb-8'>
-              <p 
-              className='text-4xl font-bold inline border-b-4 border-gray-500 font-FD'>ABOUT</p>
-            </div>
+    <section name="About" className="bg-gradient-to-b from-slate-950 via-slate-900 to-black text-white">
+      <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="space-y-6 reveal-up">
+          <div>
+            <p className="section-heading">About</p>
+            <p className="section-kicker">
+              A quick overview of how I work, what I care about, and where I like to push the design.
+            </p>
+          </div>
 
-        <p className='text-xl mt-10 font-semibold text-white max-sm:text-sm'>
-        Hello, I'm delighted to share a bit about who I am. I'm a dynamic individual with a diverse range of interests and experiences that have shaped my identity.
-        I.m currently pursuing B.TECH IT in Coimbatore.
-        In my professional life, I've had the privilege of Frontend Developer, which I continue to develop and apply in various aspects of my life.
-        </p>
-        <br />
-        <p className='text-xl font-semibold  text-white max-sm:text-sm'>
-        I'm a problem-solver at heart, adept at troubleshooting and debugging to deliver optimal solutions under tight deadlines. I stay up-to-date with the latest industry trends and emerging technologies, ensuring that the projects I work on are at the forefront of innovation.I'm excited about the ever-evolving landscape of frontend development, and I'm committed to creating exceptional user experiences through clean, maintainable, and performant code. Let's work together to transform web ideas into reality.
-        </p>
-    </div>
-    </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="section-card animated-border">
+              <p className="text-sm uppercase tracking-[0.18em] text-cyan-200/80">Currently</p>
+              <p className="mt-2 text-lg font-semibold text-white">B.Tech IT student in Coimbatore</p>
+            </div>
+            <div className="section-card animated-border">
+              <p className="text-sm uppercase tracking-[0.18em] text-cyan-200/80">Mindset</p>
+              <p className="mt-2 text-lg font-semibold text-white">Fast, practical, and detail-driven</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid gap-4 reveal-up reveal-delay-2">
+          <div className="section-card glow-card">
+            <h3 className="text-2xl font-bold text-cyan-300">What I build</h3>
+            <p className="mt-4 text-slate-300 leading-8">
+              I focus on interfaces that feel intentional, with strong layout rhythm, useful motion, and
+              interactions that make the product feel alive without being noisy.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="section-card glow-card">
+              <h4 className="text-lg font-semibold text-white">Frontend craft</h4>
+              <p className="mt-3 text-slate-300">React, Next.js, Tailwind, and responsive UI systems.</p>
+            </div>
+            <div className="section-card glow-card">
+              <h4 className="text-lg font-semibold text-white">Problem solving</h4>
+              <p className="mt-3 text-slate-300">Debugging, performance tuning, and clean feature delivery.</p>
+            </div>
+          </div>
+
+          <div className="section-card glow-card">
+            <h3 className="text-xl font-bold text-white">Design priorities</h3>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <span className="pill">clarity</span>
+              <span className="pill">motion</span>
+              <span className="pill">speed</span>
+              <span className="pill">usability</span>
+              <span className="pill">clean code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

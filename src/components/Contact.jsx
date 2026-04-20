@@ -2,25 +2,37 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div name='Contact' className='w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white max-sm:relative  max-sm:pt-20' >
-        <div className='flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full '>
-            <div className='pb8'>
-                <p className='text-4xl font-bold inline border-b-4 border-gray-500 font-FD'>CONTACT</p>
-                <p className='py-6'>Submit The form below to get in touch</p>
+    <section name='Contact' className='bg-gradient-to-b from-slate-900 to-black text-white'>
+        <div className='section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]'>
+            <div className='space-y-6 reveal-up'>
+                <div>
+                    <p className='section-heading'>CONTACT</p>
+                    <p className='section-kicker'>
+                      Submit the form below to get in touch or talk about an idea, project, or collaboration.
+                    </p>
+                </div>
+
+                <div className='section-card animated-border'>
+                    <p className='text-sm uppercase tracking-[0.24em] text-cyan-200/80'>Fast response</p>
+                    <p className='mt-2 text-xl font-semibold text-white'>Direct, clear communication</p>
+                    <p className='mt-3 text-slate-300 leading-7'>
+                      I like building things that feel polished from the first click. If you have a project
+                      in mind, send the details and I’ll respond with a practical next step.
+                    </p>
+                </div>
             </div>
-            <div className='flex justify-center items-center'>
+
+            <div className='flex items-center justify-center reveal-up reveal-delay-2'>
                 <form action="https://getform.io/f/330f259a-2e16-45b2-8249-bb1170af2e4e" method='POST'
-                className='flex flex-col w-full md:w-1/2'>
-                    <input type="text" name='name' placeholder='Enter your name' className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
-                    <input type="text" name='email' placeholder='Enter your email' className='my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
-                    <textarea name='message' placeholder='Enter your message' rows='10' className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'></textarea>
-                    <button className='text-white bg-gradient-to-b from-cyan-500 to to-blue-500 px-3 oy-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>Let's Talk</button>
+                className='section-card glow-card flex w-full flex-col gap-4'>
+                    <input type="text" name='name' placeholder='Enter your name' className='rounded-2xl border border-white/10 bg-white/5 p-4 text-white placeholder:text-slate-400 focus:border-cyan-300 focus:outline-none' />
+                    <input type="text" name='email' placeholder='Enter your email' className='rounded-2xl border border-white/10 bg-white/5 p-4 text-white placeholder:text-slate-400 focus:border-cyan-300 focus:outline-none' />
+                    <textarea name='message' placeholder='Enter your message' rows='8' className='rounded-2xl border border-white/10 bg-white/5 p-4 text-white placeholder:text-slate-400 focus:border-cyan-300 focus:outline-none'></textarea>
+                    <button className='primary-button mt-2 self-start'>Let's Talk</button>
                 </form>
-                
             </div>
         </div>
-
-    </div>
+    </section>
   )
 }
 
